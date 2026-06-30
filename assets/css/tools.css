@@ -1,0 +1,523 @@
+/* ============================================================
+   HOME PAGE
+   ============================================================ */
+.home-hero {
+  background: linear-gradient(135deg, var(--accent) 0%, #7c3aed 100%);
+  border-radius: var(--radius-xl);
+  padding: 40px 48px;
+  color: white;
+  margin-bottom: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.home-hero-title {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.home-hero-subtitle {
+  font-size: 15px;
+  opacity: 0.85;
+  margin-bottom: 24px;
+  position: relative;
+  max-width: 500px;
+}
+
+.home-hero-search {
+  position: relative;
+  max-width: 440px;
+}
+
+.home-hero-search input {
+  width: 100%;
+  padding: 12px 16px 12px 42px;
+  border-radius: var(--radius-md);
+  border: none;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: background var(--transition);
+}
+
+.home-hero-search input::placeholder { color: rgba(255,255,255,0.6); }
+.home-hero-search input:focus { background: rgba(255,255,255,0.25); }
+
+.home-hero-search .search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.7;
+}
+
+/* Tool Cards Grid */
+.tools-section { margin-bottom: 36px; }
+
+.tools-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.tools-section-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.tool-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  cursor: pointer;
+  transition: all var(--transition);
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  text-decoration: none;
+  color: var(--text);
+  position: relative;
+  overflow: hidden;
+}
+
+.tool-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent), var(--shadow-md);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.tool-card-icon {
+  font-size: 22px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-hover);
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.tool-card-content { flex: 1; min-width: 0; }
+.tool-card-name { font-size: 13.5px; font-weight: 600; color: var(--text); margin-bottom: 3px; }
+.tool-card-desc { font-size: 12px; color: var(--text-tertiary); line-height: 1.5; }
+.tool-card-category {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 10.5px;
+  padding: 2px 7px;
+  border-radius: var(--radius-full);
+  background: var(--surface-active);
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+/* ============================================================
+   ROTATION CONVERTER
+   ============================================================ */
+.rotation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.rotation-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color var(--transition);
+}
+
+.rotation-panel.active-input { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-light); }
+
+.rotation-panel-header {
+  padding: 12px 16px;
+  background: var(--surface-hover);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rotation-panel-title { font-size: 12.5px; font-weight: 600; color: var(--text); }
+.rotation-panel-body { padding: 14px 16px; }
+
+.euler-convention-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.convention-tab {
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  transition: all var(--transition);
+}
+
+.convention-tab.active { background: var(--accent); color: white; border-color: var(--accent); }
+
+.rotation-inputs { display: flex; flex-direction: column; gap: 8px; }
+.rotation-input-row { display: grid; grid-template-columns: 24px 1fr auto; align-items: center; gap: 8px; }
+.rotation-input-label { font-size: 12px; font-family: var(--font-mono); color: var(--text-tertiary); font-weight: 600; text-align: center; }
+.rotation-input-unit { font-size: 11.5px; color: var(--text-tertiary); white-space: nowrap; }
+
+.matrix-display {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.matrix-cell-display {
+  padding: 6px 4px;
+  text-align: center;
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  outline: none;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  width: 100%;
+  transition: all var(--transition);
+}
+
+.matrix-cell-display:focus {
+  border-color: var(--accent);
+  background: var(--input-bg-focus);
+}
+
+/* ============================================================
+   PID TUNER
+   ============================================================ */
+.pid-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.pid-panel { display: flex; flex-direction: column; gap: 16px; }
+
+.pid-slider-group { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 16px; }
+
+.pid-metrics { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+
+/* ============================================================
+   DH CALCULATOR
+   ============================================================ */
+.dh-table-wrapper { overflow-x: auto; }
+
+.dh-table th, .dh-table td { padding: 8px 12px; }
+.dh-table td input {
+  width: 80px;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--input-bg);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-align: center;
+  outline: none;
+  transition: all var(--transition);
+}
+
+.dh-table td input:focus { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-light); }
+
+.dh-joint-type {
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--input-bg);
+  color: var(--text);
+  font-size: 12px;
+}
+
+.transform-matrix {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: var(--code-bg);
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.transform-cell {
+  text-align: right;
+  padding: 4px 8px;
+  color: var(--text);
+  background: var(--surface);
+  border-radius: 3px;
+}
+
+/* ============================================================
+   UNIT CONVERTER
+   ============================================================ */
+.unit-converter-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.unit-category-list { display: flex; flex-direction: column; gap: 2px; }
+
+.unit-category-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 13px;
+  transition: all var(--transition);
+}
+
+.unit-category-item:hover { background: var(--surface-hover); color: var(--text); }
+.unit-category-item.active { background: var(--accent-light); color: var(--accent); font-weight: 500; }
+.unit-category-item .unit-cat-icon { font-size: 16px; }
+
+.unit-main { display: flex; flex-direction: column; gap: 16px; }
+
+.unit-input-section {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 12px;
+  align-items: end;
+}
+
+.unit-swap-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+  margin-bottom: 0;
+}
+
+.unit-swap-btn:hover { background: var(--accent); color: white; border-color: var(--accent); transform: rotate(180deg); }
+
+.unit-all-results { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; }
+
+.unit-result-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.unit-result-item:hover { border-color: var(--accent); }
+.unit-result-item.featured { border-color: var(--accent); background: var(--accent-light); }
+
+.unit-result-name { font-size: 11.5px; color: var(--text-tertiary); margin-bottom: 4px; }
+.unit-result-value { font-family: var(--font-mono); font-size: 14px; font-weight: 500; color: var(--text); }
+
+/* ============================================================
+   MATRIX CALCULATOR
+   ============================================================ */
+.matrix-calc-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.matrix-io-section {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.matrix-op-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 28px;
+}
+
+.matrix-op-btn {
+  padding: 7px 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 12.5px;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+  text-align: center;
+}
+
+.matrix-op-btn:hover { background: var(--surface-hover); color: var(--text); }
+.matrix-op-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
+
+.matrix-size-select { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+.matrix-size-select label { font-size: 12px; color: var(--text-tertiary); }
+.matrix-size-select select {
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--input-bg);
+  color: var(--text);
+  font-size: 12.5px;
+}
+
+/* ============================================================
+   CAMERA FOV
+   ============================================================ */
+.fov-diagram {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.fov-diagram canvas { width: 100% !important; height: auto !important; }
+
+/* ============================================================
+   COVARIANCE VISUALIZER
+   ============================================================ */
+.cov-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 20px;
+}
+
+/* ============================================================
+   TRAJECTORY GENERATOR
+   ============================================================ */
+.traj-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.traj-type-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.traj-type-btn {
+  padding: 8px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all var(--transition);
+  text-align: center;
+}
+
+.traj-type-btn:hover { background: var(--surface-hover); color: var(--text); }
+.traj-type-btn.active { background: var(--accent-light); color: var(--accent); border-color: var(--accent); font-weight: 500; }
+
+/* ============================================================
+   MOTION PROFILE
+   ============================================================ */
+.motion-charts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.motion-chart-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+/* ============================================================
+   COORDINATE FRAME
+   ============================================================ */
+.frame-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.frame-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px;
+}
+
+.frame-name {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.frame-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* ============================================================
+   IMU NOISE
+   ============================================================ */
+.imu-result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+
+/* ============================================================
+   RESPONSIVE TOOL LAYOUTS
+   ============================================================ */
+@media (max-width: 900px) {
+  .rotation-grid { grid-template-columns: 1fr; }
+  .pid-layout { grid-template-columns: 1fr; }
+  .unit-converter-layout { grid-template-columns: 1fr; }
+  .cov-layout { grid-template-columns: 1fr; }
+  .traj-layout { grid-template-columns: 1fr; }
+  .matrix-io-section { grid-template-columns: 1fr; }
+  .frame-grid { grid-template-columns: 1fr 1fr; }
+  .motion-chart-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .pid-metrics { grid-template-columns: 1fr 1fr; }
+  .frame-grid { grid-template-columns: 1fr; }
+  .home-hero { padding: 24px; }
+  .home-hero-title { font-size: 22px; }
+}

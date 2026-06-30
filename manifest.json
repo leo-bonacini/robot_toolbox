@@ -1,0 +1,37 @@
+{
+  "name": "Robot Toolbox",
+  "short_name": "RobotToolbox",
+  "description": "Professional robotics engineering tools: rotation converter, PID tuner, DH calculator, trajectory generator and more",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0c0c0f",
+  "theme_color": "#5865f2",
+  "icons": [
+    {
+      "src": "assets/icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "productivity", "utilities"],
+  "lang": "en",
+  "orientation": "any",
+  "shortcuts": [
+    {
+      "name": "Rotation Converter",
+      "url": "./index.html#/rotation-converter",
+      "description": "Convert between rotation representations"
+    },
+    {
+      "name": "PID Tuner",
+      "url": "./index.html#/pid-tuner",
+      "description": "Interactive PID controller design"
+    },
+    {
+      "name": "Unit Converter",
+      "url": "./index.html#/unit-converter",
+      "description": "Comprehensive unit conversion"
+    }
+  ]
+}
