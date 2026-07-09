@@ -1,8 +1,6 @@
 # Robot Toolbox
 
-**Robotics engineering tools runs entirely in the browser, no backend required.**
-
-![Robot Toolbox](assets/icons/favicon.svg)
+Robotics engineering tools runs entirely in the browser, no backend required.
 
 ## Overview
 
