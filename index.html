@@ -51,6 +51,13 @@
       </div>
 
       <div class="header-right">
+        <span id="visit-counter" class="visit-counter" title="Total site visits">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <span id="visit-count">···</span>
+        </span>
         <div class="header-actions">
           <select id="lang-selector" class="lang-selector" aria-label="Language" title="Language">
             <option value="en">EN</option>
@@ -175,5 +182,19 @@
 
   <!-- APP (must come last) -->
   <script src="assets/js/app.js"></script>
+
+  <!-- VISIT COUNTER -->
+  <script>
+    fetch('https://abacus.jasoncameron.dev/hit/robot-toolbox-leobonacini/visits')
+      .then(r => r.json())
+      .then(data => {
+        const el = document.getElementById('visit-count');
+        if (el) el.textContent = data.value.toLocaleString();
+      })
+      .catch(() => {
+        const el = document.getElementById('visit-count');
+        if (el) el.textContent = 'n/a';
+      });
+  </script>
 </body>
 </html>
