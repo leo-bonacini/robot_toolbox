@@ -1,6 +1,6 @@
 window.LOCALES = window.LOCALES || {};
 window.LOCALES.en = {
-  app: { name: 'Robot Toolbox', tagline: 'Professional Robotics Engineering Tools' },
+  app: { name: 'Robot Toolbox', tagline: 'Robotics engineering tools in the browser' },
   nav: {
     home: 'Home', favorites: 'Favorites', recent: 'Recent',
     motion: 'Motion', control: 'Control', kinematics: 'Kinematics',

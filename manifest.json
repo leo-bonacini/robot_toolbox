@@ -1,7 +1,7 @@
 {
   "name": "Robot Toolbox",
   "short_name": "RobotToolbox",
-  "description": "Professional robotics engineering tools: rotation converter, PID tuner, DH calculator, trajectory generator and more",
+  "description": "Robotics engineering tools in the browser: rotation converter, PID tuner, DH calculator, trajectory generator and more",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0c0c0f",

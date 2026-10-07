@@ -1,6 +1,6 @@
 window.LOCALES = window.LOCALES || {};
 window.LOCALES.pt = {
-  app: { name: 'Robot Toolbox', tagline: 'Ferramentas Profissionais de Engenharia Robótica' },
+  app: { name: 'Robot Toolbox', tagline: 'Ferramentas de engenharia robótica no navegador' },
   nav: {
     home: 'Início', favorites: 'Favoritos', recent: 'Recentes',
     motion: 'Movimento', control: 'Controle', kinematics: 'Cinemática',
