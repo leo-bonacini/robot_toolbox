@@ -1,10 +1,10 @@
 # Robot Toolbox
 
-Robotics engineering tools runs entirely in the browser, no backend required.
+Robotics engineering tools that run entirely in the browser, no backend required.
 
 ## Overview
 
-Robot Toolbox is a comprehensive collection of interactive engineering tools for robotics researchers, engineers, students, and educators. It runs as a pure static web application deployable on GitHub Pages with no server, build step, or installation required.
+Interactive tools for everyday robotics math: rotations, kinematics, PID tuning, unit conversions and more. It is a static web app that runs on GitHub Pages, with no server, build step or install.
 
 ## Features
 

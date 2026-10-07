@@ -1,6 +1,4 @@
-/* ============================================================
-   RESET & BASE
-   ============================================================ */
+/* Reset & base */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
@@ -36,18 +34,14 @@ input, button, select, textarea {
   font-size: inherit;
 }
 
-/* ============================================================
-   APP SHELL
-   ============================================================ */
+/* App shell */
 .app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* ============================================================
-   HEADER
-   ============================================================ */
+/* Header */
 .header {
   position: fixed;
   top: 0;
@@ -205,18 +199,14 @@ input, button, select, textarea {
 [data-theme="light"] .moon-icon { display: none; }
 [data-theme="dark"] .sun-icon { display: none; }
 
-/* ============================================================
-   MAIN LAYOUT
-   ============================================================ */
+/* Main layout */
 .main-layout {
   display: flex;
   padding-top: var(--header-height);
   min-height: 100vh;
 }
 
-/* ============================================================
-   SIDEBAR
-   ============================================================ */
+/* Sidebar */
 .sidebar {
   position: fixed;
   top: var(--header-height);
@@ -317,9 +307,7 @@ input, button, select, textarea {
 
 .sidebar-collapsed .content { margin-left: 0 !important; }
 
-/* ============================================================
-   CONTENT
-   ============================================================ */
+/* Content */
 .content {
   flex: 1;
   margin-left: var(--sidebar-width);
@@ -329,9 +317,7 @@ input, button, select, textarea {
   max-width: 100%;
 }
 
-/* ============================================================
-   SEARCH MODAL
-   ============================================================ */
+/* Search modal */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -461,9 +447,7 @@ input, button, select, textarea {
   font-size: 13.5px;
 }
 
-/* ============================================================
-   MODAL (Settings, Help, etc.)
-   ============================================================ */
+/* Modal (settings, help, etc.) */
 .modal {
   width: 100%;
   max-width: 540px;
@@ -568,9 +552,7 @@ input, button, select, textarea {
 .toggle input:checked + .toggle-slider { background: var(--accent); }
 .toggle input:checked + .toggle-slider::before { transform: translateX(16px); }
 
-/* ============================================================
-   TOAST NOTIFICATIONS
-   ============================================================ */
+/* Toast notifications */
 .toast-container {
   position: fixed;
   bottom: 24px;
@@ -614,9 +596,7 @@ input, button, select, textarea {
   to { opacity: 0; transform: translateX(16px); }
 }
 
-/* ============================================================
-   TYPOGRAPHY UTILITIES
-   ============================================================ */
+/* Typography utilities */
 .text-xs { font-size: 11px; }
 .text-sm { font-size: 12.5px; }
 .text-base { font-size: 14px; }
@@ -637,9 +617,7 @@ input, button, select, textarea {
 .text-error { color: var(--error); }
 .text-warning { color: var(--warning); }
 
-/* ============================================================
-   LAYOUT UTILITIES
-   ============================================================ */
+/* Layout utilities */
 .flex { display: flex; }
 .flex-col { flex-direction: column; }
 .items-center { align-items: center; }
@@ -651,9 +629,7 @@ input, button, select, textarea {
 .gap-6 { gap: 24px; }
 .w-full { width: 100%; }
 
-/* ============================================================
-   CARD
-   ============================================================ */
+/* Card */
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -676,9 +652,7 @@ input, button, select, textarea {
 .card-title { font-size: 13.5px; font-weight: 600; color: var(--text); }
 .card-subtitle { font-size: 12px; color: var(--text-tertiary); margin-top: 2px; }
 
-/* ============================================================
-   BUTTON
-   ============================================================ */
+/* Button */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -735,9 +709,7 @@ input, button, select, textarea {
 .btn-lg { padding: 10px 20px; font-size: 14px; }
 .btn-icon { padding: 8px; }
 
-/* ============================================================
-   FORM CONTROLS
-   ============================================================ */
+/* Form controls */
 .form-group { display: flex; flex-direction: column; gap: 6px; }
 .form-label { font-size: 12.5px; font-weight: 500; color: var(--text-secondary); }
 .form-hint { font-size: 11.5px; color: var(--text-tertiary); }
@@ -830,9 +802,7 @@ input[type="range"]::-moz-range-thumb {
   border: none;
 }
 
-/* ============================================================
-   TABLE
-   ============================================================ */
+/* Table */
 .table-wrapper { overflow-x: auto; border-radius: var(--radius-lg); border: 1px solid var(--border); }
 
 table {
@@ -887,9 +857,7 @@ tbody td.value-cell { font-family: var(--font-mono); font-size: 12.5px; color: v
 
 .matrix-cell:focus { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-light); }
 
-/* ============================================================
-   RESULT DISPLAY
-   ============================================================ */
+/* Result display */
 .result-card {
   background: var(--bg-tertiary, var(--surface-hover));
   border: 1px solid var(--border);
@@ -938,9 +906,7 @@ tbody td.value-cell { font-family: var(--font-mono); font-size: 12.5px; color: v
 .badge-default { background: var(--surface-hover); color: var(--text-secondary); }
 .badge-accent { background: var(--accent-light); color: var(--accent); }
 
-/* ============================================================
-   CODE DISPLAY
-   ============================================================ */
+/* Code display */
 .code-block {
   background: var(--code-bg);
   border: 1px solid var(--border);
@@ -953,9 +919,7 @@ tbody td.value-cell { font-family: var(--font-mono); font-size: 12.5px; color: v
   color: var(--text);
 }
 
-/* ============================================================
-   INFO PANEL (Formula, Notes)
-   ============================================================ */
+/* Info panel (formula, notes) */
 .info-panel {
   background: var(--info-light, var(--accent-light));
   border: 1px solid var(--info, var(--accent));
@@ -968,9 +932,7 @@ tbody td.value-cell { font-family: var(--font-mono); font-size: 12.5px; color: v
 
 .info-panel strong { color: var(--text); }
 
-/* ============================================================
-   TABS
-   ============================================================ */
+/* Tabs */
 .tabs { display: flex; gap: 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
 
 .tab {
@@ -994,22 +956,16 @@ tbody td.value-cell { font-family: var(--font-mono); font-size: 12.5px; color: v
 .tab-content { display: none; }
 .tab-content.active { display: block; }
 
-/* ============================================================
-   GRID LAYOUTS
-   ============================================================ */
+/* Grid layouts */
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .grid-auto { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
 
-/* ============================================================
-   SEPARATOR
-   ============================================================ */
+/* Separator */
 .separator { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
 
-/* ============================================================
-   CANVAS / CHART WRAPPER
-   ============================================================ */
+/* Canvas / chart wrapper */
 .chart-wrapper {
   position: relative;
   background: var(--surface);
@@ -1029,9 +985,7 @@ tbody td.value-cell { font-family: var(--font-mono); font-size: 12.5px; color: v
   overflow: hidden;
 }
 
-/* ============================================================
-   3D VIEWER
-   ============================================================ */
+/* 3D viewer */
 .viewer-3d {
   width: 100%;
   aspect-ratio: 4/3;
@@ -1044,9 +998,7 @@ tbody td.value-cell { font-family: var(--font-mono); font-size: 12.5px; color: v
 
 .viewer-3d canvas { display: block; width: 100% !important; height: 100% !important; }
 
-/* ============================================================
-   TOOL HEADER
-   ============================================================ */
+/* Tool header */
 .tool-header {
   margin-bottom: 28px;
 }
@@ -1077,9 +1029,7 @@ tbody td.value-cell { font-family: var(--font-mono); font-size: 12.5px; color: v
   margin-top: 16px;
 }
 
-/* ============================================================
-   SECTION HEADER
-   ============================================================ */
+/* Section header */
 .section-header {
   margin-bottom: 14px;
 }
@@ -1093,9 +1043,7 @@ tbody td.value-cell { font-family: var(--font-mono); font-size: 12.5px; color: v
 
 .section-subtitle { font-size: 12px; color: var(--text-tertiary); }
 
-/* ============================================================
-   STAT CARD
-   ============================================================ */
+/* Stat card */
 .stat-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -1107,9 +1055,7 @@ tbody td.value-cell { font-family: var(--font-mono); font-size: 12.5px; color: v
 .stat-value { font-size: 22px; font-weight: 700; font-family: var(--font-mono); color: var(--text); letter-spacing: -0.02em; }
 .stat-unit { font-size: 12px; color: var(--text-tertiary); margin-top: 2px; }
 
-/* ============================================================
-   EMPTY STATE
-   ============================================================ */
+/* Empty state */
 .empty-state {
   text-align: center;
   padding: 48px 24px;
@@ -1120,9 +1066,7 @@ tbody td.value-cell { font-family: var(--font-mono); font-size: 12.5px; color: v
 .empty-state-title { font-size: 15px; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px; }
 .empty-state-desc { font-size: 13px; line-height: 1.6; }
 
-/* ============================================================
-   KEYBOARD SHORTCUT CHIP
-   ============================================================ */
+/* Keyboard shortcut chip */
 kbd {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -1133,9 +1077,7 @@ kbd {
   color: var(--text-secondary);
 }
 
-/* ============================================================
-   LOADING SPINNER
-   ============================================================ */
+/* Loading spinner */
 .spinner {
   width: 20px;
   height: 20px;
@@ -1147,9 +1089,7 @@ kbd {
 
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* ============================================================
-   ANIMATIONS
-   ============================================================ */
+/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -1163,9 +1103,7 @@ kbd {
 .animate-fade { animation: fadeIn 0.25s ease; }
 .animate-slide { animation: slideUp 0.25s ease; }
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
+/* Responsive */
 @media (max-width: 1024px) {
   .grid-3 { grid-template-columns: 1fr 1fr; }
   .grid-4 { grid-template-columns: 1fr 1fr; }
@@ -1197,17 +1135,13 @@ kbd {
   .tool-title { font-size: 18px; }
 }
 
-/* ============================================================
-   PRINT
-   ============================================================ */
+/* Print */
 @media print {
   .header, .sidebar, .tool-actions { display: none !important; }
   .content { margin-left: 0 !important; padding: 0 !important; }
 }
 
-/* ============================================================
-   FOCUS VISIBLE
-   ============================================================ */
+/* Focus visible */
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;

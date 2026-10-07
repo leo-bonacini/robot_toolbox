@@ -1,6 +1,4 @@
-/* ============================================================
-   HOME PAGE
-   ============================================================ */
+/* Home page */
 .home-hero {
   background: linear-gradient(135deg, var(--accent) 0%, #7c3aed 100%);
   border-radius: var(--radius-xl);
@@ -129,9 +127,7 @@
   font-weight: 500;
 }
 
-/* ============================================================
-   ROTATION CONVERTER
-   ============================================================ */
+/* Rotation converter */
 .rotation-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -214,9 +210,7 @@
   background: var(--input-bg-focus);
 }
 
-/* ============================================================
-   PID TUNER
-   ============================================================ */
+/* PID tuner */
 .pid-layout {
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -230,9 +224,7 @@
 
 .pid-metrics { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
 
-/* ============================================================
-   DH CALCULATOR
-   ============================================================ */
+/* DH calculator */
 .dh-table-wrapper { overflow-x: auto; }
 
 .dh-table th, .dh-table td { padding: 8px 12px; }
@@ -281,9 +273,7 @@
   border-radius: 3px;
 }
 
-/* ============================================================
-   UNIT CONVERTER
-   ============================================================ */
+/* Unit converter */
 .unit-converter-layout {
   display: grid;
   grid-template-columns: 220px 1fr;
@@ -352,9 +342,7 @@
 .unit-result-name { font-size: 11.5px; color: var(--text-tertiary); margin-bottom: 4px; }
 .unit-result-value { font-family: var(--font-mono); font-size: 14px; font-weight: 500; color: var(--text); }
 
-/* ============================================================
-   MATRIX CALCULATOR
-   ============================================================ */
+/* Matrix calculator */
 .matrix-calc-layout {
   display: flex;
   flex-direction: column;
@@ -402,9 +390,7 @@
   font-size: 12.5px;
 }
 
-/* ============================================================
-   CAMERA FOV
-   ============================================================ */
+/* Camera FOV */
 .fov-diagram {
   width: 100%;
   max-width: 400px;
@@ -413,18 +399,14 @@
 
 .fov-diagram canvas { width: 100% !important; height: auto !important; }
 
-/* ============================================================
-   COVARIANCE VISUALIZER
-   ============================================================ */
+/* Covariance visualizer */
 .cov-layout {
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 20px;
 }
 
-/* ============================================================
-   TRAJECTORY GENERATOR
-   ============================================================ */
+/* Trajectory generator */
 .traj-layout {
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -454,9 +436,7 @@
 .traj-type-btn:hover { background: var(--surface-hover); color: var(--text); }
 .traj-type-btn.active { background: var(--accent-light); color: var(--accent); border-color: var(--accent); font-weight: 500; }
 
-/* ============================================================
-   MOTION PROFILE
-   ============================================================ */
+/* Motion profile */
 .motion-charts {
   display: flex;
   flex-direction: column;
@@ -465,9 +445,7 @@
 
 .motion-chart-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 
-/* ============================================================
-   COORDINATE FRAME
-   ============================================================ */
+/* Coordinate frame */
 .frame-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -496,14 +474,10 @@
   border-radius: 50%;
 }
 
-/* ============================================================
-   IMU NOISE
-   ============================================================ */
+/* IMU noise */
 .imu-result-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 
-/* ============================================================
-   RESPONSIVE TOOL LAYOUTS
-   ============================================================ */
+/* Responsive tool layouts */
 @media (max-width: 900px) {
   .rotation-grid { grid-template-columns: 1fr; }
   .pid-layout { grid-template-columns: 1fr; }

@@ -3,7 +3,7 @@ Router.register({
   name: 'Unit Converter',
   icon: '📏',
   category: 'math',
-  description: 'Comprehensive robotics unit conversion: distance, velocity, torque, force and more',
+  description: 'Robotics unit conversion: distance, velocity, torque, force and more',
   tags: ['units', 'conversion', 'SI', 'metric', 'imperial', 'distance', 'velocity', 'torque', 'force', 'pressure'],
 
   init(container) {
@@ -135,7 +135,7 @@ Router.register({
       container.innerHTML=`
         <div class="tool-header">
           <div class="tool-title"><span class="tool-icon">📏</span> Unit Converter</div>
-          <div class="tool-description">Comprehensive unit conversion for robotics and engineering applications.</div>
+          <div class="tool-description">Unit conversion for robotics and engineering.</div>
         </div>
         <div class="unit-converter-layout">
           <div class="card">

@@ -1,6 +1,4 @@
-/* ============================================================
-   ROTATION MATH UTILITIES (shared across rotation tools)
-   ============================================================ */
+/* Rotation math utilities (shared across rotation tools) */
 const RotMath = (() => {
   const d2r = Math.PI / 180;
   const r2d = 180 / Math.PI;
@@ -164,9 +162,7 @@ const RotMath = (() => {
     isValidR, det33 };
 })();
 
-/* ============================================================
-   ROTATION CONVERTER TOOL
-   ============================================================ */
+/* Rotation converter tool */
 Router.register({
   id: 'rotation-converter',
   name: 'Rotation Converter',

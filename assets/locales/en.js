@@ -25,7 +25,7 @@ window.LOCALES.en = {
     ackermann: { name: 'Ackermann Steering', desc: 'Ackermann steering geometry: steering angles, turning radius for car-like robots' },
     mecanum: { name: 'Mecanum Wheels', desc: 'Forward and inverse kinematics for mecanum wheel robots' },
     skidSteer: { name: 'Skid Steer', desc: 'Kinematics for skid-steer (tank-drive) robots' },
-    unitConverter: { name: 'Unit Converter', desc: 'Comprehensive robotics unit conversion: distance, velocity, torque, force and more' },
+    unitConverter: { name: 'Unit Converter', desc: 'Robotics unit conversion: distance, velocity, torque, force and more' },
     matrixCalculator: { name: 'Matrix Calculator', desc: 'Matrix operations: add, multiply, inverse, determinant, eigenvalues, LU decomposition' },
     covarianceVisualizer: { name: 'Covariance Visualizer', desc: 'Visualize covariance matrices as confidence ellipses with principal axes' },
     coordinateFrame: { name: 'Coordinate Frames', desc: 'Convert positions between ENU, NED, ECEF, UTM and body frames' },
